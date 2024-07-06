@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" width="device-width"> 
+	<head>
+		{% load static %}
+		
+		<title >
+			
+			SVM
+			
+		</title>
+		<link rel='icon' type='image/x-icon' href="{% static 'logo.ico' %} " alt='Nothing'>
+		
+		{% load bootstrap5 %}
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+	</head>
+	<body>
+		
+		<div class='container-sm'>
+		<h1 class='h1'>Models</h1>
+		<div class="Container-sm form-group" style='margin-top: 2rem;'>
+			<form action="" method="POST" invalidate>
+				{% csrf_token %}
+				<div class='form-group text-dark'style="
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+			<b>
+					{{ form.as_p }}
+				</div>
+				<input type ='submit' value='submit' class='btn btn-success'/>
+			</form>
+		</div>
+		</div>
+		<div>
+			{% comment %}
+			{% for x in teams %}
+				<p>{{ x }} </p>
+			{% endfor %}
+			
+			{{ teams }}
+			{% endcomment %}
+		</div>
+		<h1 class="h-1 container-sm "> svms </h1>
+		<div class="container-sm bg-success mb-5 py-5" style="font: bold;
+					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+			<b>
+			
+			Accuracy: {{ svms }}
+			</b>
+		</div>
+		<h1 class="h-1 container-sm "> Naive bayes </h1>
+		<div class="container-sm bg-danger mb-5 py-5" style="font: bold;
+					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+			<b>
+			
+			Accuracy: {{ nb }}
+			</b>
+		</div>
+
+		<h1 class="h-1 container-sm "> KNeighborsClassifier </h1>
+		<div class="container-sm bg-warning mb-5 py-5" style="font: bold;
+					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+			<b>
+			
+			Accuracy: {{ knn }}
+			</b>
+		</div>
+
+		<h1 class="h-1 container-sm "> Tensor Flow Model </h1>
+		<div class="container-sm bg-dark mb-5 py-5 text-white" style="font: bold;
+					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+			<b>
+			
+			Accuracy: {{ tf }}
+			</b>
+		</div>
+		
+	</body>
+</html>

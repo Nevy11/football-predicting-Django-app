@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			predicted
+			
+		</title>
+		
+		{% load static %}
+		<link rel="icon" type="image/x-icon" href="{% static 'logo.ico' %}">
+		{% load bootstrap5 %}
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+	</head>
+	<body>
+		<div class='container-sm'>
+			<div class='container-sm my-5 bg-success py-5' style='text-align: center; 
+				color: tomato; font-style: italic;'>
+			<h1 class='h-1 text-white'> Predicted Teams</h1>
+			</div>
+			<div class = 'container-sm '>
+			The team predicted below is the correct one according to fifaHomeWins.keras
+			</div>
+			<div class="container-sm bg-dark text-white mt-5 py-3" style="font-style: italic;
+				 font-size: larger; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+				<b>Format</b>
+			</div>
+			<div class='container-sm bg-warning my-5 py-3 text-dark' style="font-family: Lucid; 
+				font-size: medium; font-style: italic; text-align: center;">
+				HomeTeam vs AwayTeam = winTeam 
+			</div>
+			<div class='container-sm bg-warning my-5 py-3 text-dark' style="font-family: Lucid; 
+					font-size: medium; text-align: center;">
+
+				{{ homeTeam }} vs {{ awayTeam }} = {{ winTeam }} 
+			</div>
+				
+			
+			<div class="container-sm bg-dark text-white mt-5 py-3" style="font-style: italic;
+				 font-size: larger; font-family: Arial, Helvetica, sans-serif; text-align: center;"
+				  >
+				  <a href="/" class="text-decoration-none">
+				  	<b>Back to main Page</b>
+				  </a></div>
+				
+		<div class="container-sm bg-dark text-white mt-5 py-3" style="font-style: italic;
+				  font-size: larger; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+
+				  
+
+<div class="container-sm bg-dark text-white mt-5 py-3" style="font-style: italic;
+font-size: larger; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+				<p>The model predicting the awayTeam fifaHomeWins
+					Chances of away team winning is 97% in svm
+				</p>
+
+			</div>
+
+			<div>
+				<p>This model is predicet on a dataset of football 
+					the previous season 
+
+				</p>
+			</div>
+			<div>
+				if the prediction is empty then it means that the games
+				in the previous season were removed
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
